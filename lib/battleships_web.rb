@@ -2,6 +2,7 @@ require 'sinatra/base'
 
 class BattleshipsWeb < Sinatra::Base
   get '/' do
+   # 'Hello' 
     erb :index
   end
 
