@@ -2,7 +2,6 @@ require 'sinatra/base'
 
 class BattleshipsWeb < Sinatra::Base
   get '/' do
-    # 'Hello'
     erb :index
   end
 
@@ -11,8 +10,8 @@ class BattleshipsWeb < Sinatra::Base
   end
 
   get '/greeting' do
-  	@name = params[:name]
-  	"Hi " + params[:name]
+    @name = params[:name]
+    "Hi " + params[:name]
   end
 
   set :views, proc { File.join(root, '..', 'views')}
