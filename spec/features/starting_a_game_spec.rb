@@ -12,6 +12,13 @@ feature 'Starting a new game' do
     click_link 'New Game'
     fill_in('name', with: 'James')
     click_button('submit')
-    expect(page).to have_content "Hi James"
+    expect(page).to have_content "Hello James, you are the chosen one. Now, click the magic button to see your board on which you will place your ships"
+  end
+
+  scenario 'Filled in empty form' do
+    visit '/new_game'
+    fill_in('name', with: '')
+    click_button('submit')
+    expect(page).to have_content "Please enter your name"
   end
 end
