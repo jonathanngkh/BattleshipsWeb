@@ -21,4 +21,13 @@ feature 'Starting a new game' do
     click_button('submit')
     expect(page).to have_content "Please enter your name"
   end
+
+  scenario 'player can select new board button once they have entered a name' do
+    visit '/new_game'
+    fill_in('name', with: 'James')
+    click_button('submit')
+    expect(page).to have_content "HUZZAH"
+    click_link('HUZZAH')
+  end
+
 end
