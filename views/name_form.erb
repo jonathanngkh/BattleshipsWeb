@@ -1,5 +1,5 @@
 <div>
-  <% if @name == '' %>
+  <% if @name == '' or @name == nil %>
     <form action="/new_game">
       Please enter your name
       <input type="text" name="name">
