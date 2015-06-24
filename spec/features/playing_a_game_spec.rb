@@ -10,9 +10,9 @@ feature 'Playing a game' do
 
   scenario 'placing the ship' do
     visit '/new_board'
-    fill_in('type', with: 'battleship')
+    select 'DESTROYER', from: 'ship'
     fill_in('coordinate', with:'A1')
-    fill_in('direction', with:'horizontally')
+    select 'Horizontal', from: 'Direction'
     click_button('Submit')
     expect(page).to have_content "ABCDEFGHIJ
   ------------

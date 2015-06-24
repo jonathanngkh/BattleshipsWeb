@@ -1,8 +1,46 @@
 <div>
-  <pre><%= $game.own_board_view($game.player_1) %></pre>
-  Enter coordinate to add ship:
+  <pre><b><%= $game.own_board_view($game.player_1) %></b></pre>
+  <b><u>There are 5 types of ships available to you:</b></u>
+  <br>
+  <br>
+  √ Submarines take up 1 spot.
+  <br>
+  √ Cruisers take 2 spots.
+  <br>
+  √ Destroyers take 3 spots.
+  <br>
+  √ Battleships take 4 spots.
+  <br>
+  √ Aircraft Carriers take 5 spots.
+  <br>
+  <br>
+  <b><u>To place a ship:</b></u>
+  <br>
+  <br>
+  Pick a type:
   <form action="/new_board">
-    <input type="text" name="coordinate">
-    <input type="submit" value="Submit">
+    <select name="ship">
+      <option value="submarine">Submarine</option>
+      <option value="cruiser">Cruiser</option>
+      <option value="destroyer">DESTROYER</option>
+      <option vlue="battleship">Battleship</option>
+      <option value="aircraft_carrier">Aircraft Carrier</option>
+  </select>
+  <br>
+  <br>
+  Enter a coordinate:
+  <br>
+  <input type="text" name="coordinate">
+  <br>
+  <br>
+  Choose a direction:
+  <br>
+    <select name="Direction">
+      <option value="horizontal">horizontal</option>
+      <option value="vertical">vertical</option>
+    </select>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
   </form>
 </div>

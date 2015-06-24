@@ -36,8 +36,6 @@ feature 'Starting a new game' do
     click_button('Submit')
     click_link('HUZZAH')
     expect(page).to have_content "ABCDEFGHIJ"
-
-
   end
 
 end
