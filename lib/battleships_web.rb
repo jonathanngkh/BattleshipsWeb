@@ -13,7 +13,16 @@ class BattleshipsWeb < Sinatra::Base
 
   get '/new_board' do
     $game = Game.new(Player, Board)
+
+    if params[:ship] != nil or params[:ship]
+    $game.player_1.place_ship(Ship.send(params[:ship]), params[:coordinate], params[:direction])
+    end
+
     erb :own_board_view
+  end
+
+  get '/place_ship' do
+
   end
 
   set :views, proc { File.join(root, '..', 'views')}

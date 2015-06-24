@@ -12,7 +12,7 @@ feature 'Playing a game' do
     visit '/new_board'
     select 'DESTROYER', from: 'ship'
     fill_in('coordinate', with:'A1')
-    select 'Horizontal', from: 'Direction'
+    select 'Horizontal', from: 'direction'
     click_button('Submit')
     expect(page).to have_content "ABCDEFGHIJ
   ------------
