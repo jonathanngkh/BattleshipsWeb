@@ -3,10 +3,11 @@
     <form action="/new_game">
       Please enter your name
       <input type="text" name="name">
-      <input type="submit" value="submit">
+      <input type="submit" value="Submit">
     </form>
   <% else %>
-    Hello <%= @name%>, you are the chosen one. Now, click the magic button to see your board on which you will place your ships.
+    Hello <%= @name %>, you are the chosen one. Now, click the magic button to see your board upon which you will place your ships.
+    <br />
     <br />
     <a href="/new_board">HUZZAH</a>
   <% end %>
